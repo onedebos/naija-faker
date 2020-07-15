@@ -67,7 +67,7 @@ const getState = () => {
   const min = 0;
   max = states.length;
   const position = Math.floor(Math.random() * (max - min) + min);
-  return states[position];
+  return states[position].toLowerCase();
 };
 
 const getPerson = (options) => {
@@ -139,8 +139,6 @@ const getNameList = (options) => {
     return firstNamesArr;
   }
 };
-
-console.log(getPerson());
 
 module.exports = {
   getFirstName,

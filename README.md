@@ -35,11 +35,11 @@ NB: Currently only accepts one letter
 
 NB: Default age is between 18 - 50
 
-- `getPerson() //=> {fName: 'abdul', lName: 'qadr', age: 20 }`
+- `getPerson() //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti' }`
 
 -- To change the default `min` and `max` values for age, pass in min and max values as an object like below.
 
-- e.g: `getPerson({min:20, max:50}) //=> {fName: 'abdul', lName: 'qadr', age: 40 }`
+- e.g: `getPerson({min:20, max:50}) //=> {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti' }`
 
 ## Generate an array of people with first name, last name and age
 
@@ -47,7 +47,7 @@ NB: Default age is between 18 - 50
   NB: Default `amt` is 5
 
 ```
-getPersonList({amt: 2}) //=> [{fName: 'abdul', lName: 'qadr', age: 40 }, {fName: 'frank', lName: 'edoho', age: 23 }]`
+getPersonList({amt: 2}) //=> [{fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti' }, {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta' }]`
 ```
 
 ## Generate an array of only names
@@ -57,6 +57,10 @@ getPersonList({amt: 2}) //=> [{fName: 'abdul', lName: 'qadr', age: 40 }, {fName:
 ```
 getNameList({amt: 5}) //Default amt is 5.
 ```
+
+## Generate a random Nigerian state
+
+- Simply call `getState()`
 
 ## Authors
 
