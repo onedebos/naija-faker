@@ -19,19 +19,19 @@ This package helps you generate Nigerian data on the fly for use in your project
 
 # Available methods
 
-## Generate a random First name or Last name
+### Generate a random First name or Last name
 
 - `getFirstName() //=> 'abraham'`
 - `getLastName() //=> 'fatai`
 
-## Generate a random First name or Last name that starts with a specific letter
+### Generate a random First name or Last name that starts with a specific letter
 
 NB: Currently only accepts one letter
 
 - `getFirstName('r') //=> 'rahman'`
 - `getLastName('b') //=> 'bolanle'`
 
-## Generate a person Object with random values for First name, Last name and Age
+### Generate a person Object with random values for First name, Last name and Age
 
 NB: Default age is between 18 - 50
 
@@ -41,7 +41,7 @@ NB: Default age is between 18 - 50
 
 - e.g: `getPerson({min:20, max:50}) //=> {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti' }`
 
-## Generate an array of people with first name, last name and age
+### Generate an array of people with first name, last name and age
 
 - To generate an array of people, simply pass an `amt` value to `getPerson()` i.e `getPersonList({amt: 2})`
   NB: Default `amt` is 5
@@ -50,7 +50,7 @@ NB: Default age is between 18 - 50
 getPersonList({amt: 2}) //=> [{fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti' }, {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta' }]`
 ```
 
-## Generate an array of only names
+### Generate an array of only names
 
 - Simply pass `amt` to `getNameList()` e.g
 
@@ -58,9 +58,13 @@ getPersonList({amt: 2}) //=> [{fName: 'abdul', lName: 'qadr', age: 40, email: 'a
 getNameList({amt: 5}) //Default amt is 5.
 ```
 
-## Generate a random Nigerian state
+### Generate a random Nigerian state
 
 - Simply call `getState()`
+
+### Generate a bank name
+
+- Simply call `getBank()`
 
 ## Authors
 

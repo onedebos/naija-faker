@@ -1,6 +1,6 @@
 {
   "name": "naija-faker",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "This package allows you to generate Nigerian names for use in your javascript projects.",
   "main": "index.js",
   "scripts": {

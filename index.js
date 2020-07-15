@@ -1,8 +1,11 @@
 const path = require("path");
-const { firstNames, lastNames, states, emailProviders } = require(path.join(
-  __dirname,
-  "names.js"
-));
+const {
+  firstNames,
+  lastNames,
+  states,
+  emailProviders,
+  banks,
+} = require(path.join(__dirname, "names.js"));
 
 const getFirstName = (letterToStartWith) => {
   let max = firstNames.length - 1;
@@ -70,6 +73,13 @@ const getState = () => {
   return states[position].toLowerCase();
 };
 
+const getBank = () => {
+  const min = 0;
+  max = banks.length;
+  const position = Math.floor(Math.random() * (max - min) + min);
+  return banks[position].toLowerCase();
+};
+
 const getPerson = (options) => {
   let fName, lName, age;
   if (!options) {
@@ -84,6 +94,7 @@ const getPerson = (options) => {
       age,
       email: getEmail(fName, lName),
       state: getState(),
+      bank: getBank(),
     };
   } else {
     let { min, max } = options;
@@ -96,6 +107,7 @@ const getPerson = (options) => {
       age,
       email: getEmail(fName, lName),
       state: getState(),
+      bank: getBank(),
     };
   }
 };
@@ -146,4 +158,5 @@ module.exports = {
   getPerson,
   getPersonList,
   getNameList,
+  getBank,
 };
