@@ -15,9 +15,26 @@ This package helps you generate Nigerian data on the fly for use in your project
  const naijaFaker = require('naija-faker)
 ```
 
-- use it! `naijaFaker.getFirstName()`
+- use it!
+  `naijaFaker.getFirstName()`
 
 # Available methods
+
+### Generate an array of people with first name, last name, age, bank and state
+
+- To generate an array of people, simply pass an `amt` value to `getPerson()` i.e `getPersonList({amt: 2})`
+  NB: Default `amt` is 5
+
+```
+
+ getPersonList({amt: 2})
+  //=> [
+{fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti' },
+{fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta' }
+
+]`
+
+```
 
 ### Generate a random First name or Last name
 
@@ -35,36 +52,39 @@ NB: Currently only accepts one letter
 
 NB: Default age is between 18 - 50
 
-- `getPerson() //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti' }`
+```
+ getPerson()
+  //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti' }
+```
+
+````
 
 -- To change the default `min` and `max` values for age, pass in min and max values as an object like below.
 
-- e.g: `getPerson({min:20, max:50}) //=> {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti' }`
+- e.g: ```
+  getPerson({min:20, max:50})
+  //=> {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti', bank: 'Access bank' }
 
-### Generate an array of people with first name, last name and age
-
-- To generate an array of people, simply pass an `amt` value to `getPerson()` i.e `getPersonList({amt: 2})`
-  NB: Default `amt` is 5
-
-```
-getPersonList({amt: 2}) //=> [{fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti' }, {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta' }]`
-```
+````
 
 ### Generate an array of only names
 
 - Simply pass `amt` to `getNameList()` e.g
 
 ```
-getNameList({amt: 5}) //Default amt is 5.
+
+getNameList({amt: 5})
+//=>Default amt is 5.
+
 ```
 
 ### Generate a random Nigerian state
 
-- Simply call `getState()`
+- Simply call `getState() //=> 'Ondo'`
 
 ### Generate a bank name
 
-- Simply call `getBank()`
+- Simply call `getBank() //=> 'Access Bank'`
 
 ## Authors
 
@@ -88,3 +108,7 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.
+
+```
+
+```
