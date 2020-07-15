@@ -44,6 +44,7 @@ NB: Default age is between 18 - 50
 ## Generate an array of people with first name, last name and age
 
 - To generate an array of people, simply pass an `amt` value to `getPerson()` i.e `getPersonList({amt: 2})`
+  NB: Default `amt` is 5
 
 ```
 getPersonList({amt: 2}) //=> [{fName: 'abdul', lName: 'qadr', age: 40 }, {fName: 'frank', lName: 'edoho', age: 23 }]`
@@ -54,7 +55,7 @@ getPersonList({amt: 2}) //=> [{fName: 'abdul', lName: 'qadr', age: 40 }, {fName:
 - Simply pass `amt` to `getNameList()` e.g
 
 ```
-getNameList({amt: 5})
+getNameList({amt: 5}) //Default amt is 5.
 ```
 
 ## Authors
