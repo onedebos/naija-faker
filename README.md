@@ -23,16 +23,16 @@ This package helps you generate Nigerian data on the fly for use in your project
 ### Generate an array of people with first name, last name, age, bank and state
 
 - To generate an array of people, simply pass an `amt` value to `getPerson()` i.e `getPersonList({amt: 2})`
-  NB: Default `amt` is 5
+- NB: Default `amt` is 5
 
 ```
 
  getPersonList({amt: 2})
-  //=> [
-{fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti' },
-{fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta' }
-
-]`
+  =>
+  [
+    {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti' },
+    {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta' }
+  ]`
 
 ```
 
@@ -43,14 +43,14 @@ This package helps you generate Nigerian data on the fly for use in your project
 
 ### Generate a random First name or Last name that starts with a specific letter
 
-NB: Currently only accepts one letter
+- **NB: Currently only accepts one letter**
 
 - `getFirstName('r') //=> 'rahman'`
 - `getLastName('b') //=> 'bolanle'`
 
 ### Generate a person Object with random values for First name, Last name and Age
 
-NB: Default age is between 18 - 50
+- **NB: Default age is between 18 - 50**
 
 ```
  getPerson()
@@ -63,7 +63,10 @@ NB: Default age is between 18 - 50
 
 - e.g: ```
   getPerson({min:20, max:50})
-  //=> {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti', bank: 'Access bank' }
+  => {
+    fName: 'abdul', lName: 'qadr', age: 40,
+    email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank'
+    }
 
 ````
 
@@ -71,10 +74,10 @@ NB: Default age is between 18 - 50
 
 - Simply pass `amt` to `getNameList()` e.g
 
-```
+  **NB: Default `amt` is 5**
 
+```
 getNameList({amt: 5})
-//=>Default amt is 5.
 
 ```
 
