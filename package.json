@@ -1,0 +1,33 @@
+{
+  "name": "naija-faker",
+  "version": "1.0.0",
+  "description": "This package allows you to generate Nigerian names for use in your javascript projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onedebos/naija-faker.git"
+  },
+  "keywords": [
+    "nigerian",
+    "names",
+    "faker",
+    "naija-faker",
+    "dummy",
+    "nigerian",
+    "data",
+    "naija",
+    "nigerian",
+    "first",
+    "names",
+    "nigeria"
+  ],
+  "author": "Adebola Adeniran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onedebos/naija-faker/issues"
+  },
+  "homepage": "https://github.com/onedebos/naija-faker#readme"
+}
