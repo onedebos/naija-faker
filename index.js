@@ -1,5 +1,8 @@
 const path = require("path");
-const { firstNames, lastNames } = require(path.join(__dirname, "names.js"));
+const { firstNames, lastNames, states, emailProviders } = require(path.join(
+  __dirname,
+  "names.js"
+));
 
 const getFirstName = (letterToStartWith) => {
   let max = firstNames.length - 1;
@@ -54,11 +57,17 @@ const getLastName = (letterToStartWith) => {
 };
 
 const getEmail = (fName, lName) => {
-  const emailProviders = ["gmail.com", "yahoo.com", "hey.com"];
   const min = 0;
   max = emailProviders.length;
   const position = Math.floor(Math.random() * (max - min) + min);
   return `${fName}.${lName}@${emailProviders[position]}`;
+};
+
+const getState = () => {
+  const min = 0;
+  max = states.length;
+  const position = Math.floor(Math.random() * (max - min) + min);
+  return states[position];
 };
 
 const getPerson = (options) => {
@@ -74,6 +83,7 @@ const getPerson = (options) => {
       lName,
       age,
       email: getEmail(fName, lName),
+      state: getState(),
     };
   } else {
     let { min, max } = options;
@@ -85,6 +95,7 @@ const getPerson = (options) => {
       lName,
       age,
       email: getEmail(fName, lName),
+      state: getState(),
     };
   }
 };
