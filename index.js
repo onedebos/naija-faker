@@ -53,6 +53,14 @@ const getLastName = (letterToStartWith) => {
   }
 };
 
+const getEmail = (fName, lName) => {
+  const emailProviders = ["gmail.com", "yahoo.com", "hey.com"];
+  const min = 0;
+  max = emailProviders.length;
+  const position = Math.floor(Math.random() * (max - min) + min);
+  return `${fName}.${lName}@${emailProviders[position]}`;
+};
+
 const getPerson = (options) => {
   let fName, lName, age;
   if (!options) {
@@ -65,6 +73,7 @@ const getPerson = (options) => {
       fName,
       lName,
       age,
+      email: getEmail(fName, lName),
     };
   } else {
     let { min, max } = options;
@@ -75,6 +84,7 @@ const getPerson = (options) => {
       fName,
       lName,
       age,
+      email: getEmail(fName, lName),
     };
   }
 };
@@ -118,6 +128,8 @@ const getNameList = (options) => {
     return firstNamesArr;
   }
 };
+
+console.log(getPerson());
 
 module.exports = {
   getFirstName,
