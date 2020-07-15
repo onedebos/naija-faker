@@ -1,6 +1,6 @@
 # naija-faker
 
-This package helps you generate random Nigerian names on the fly for use in seeding your DB or for loading data into your apps.
+This package helps you generate Nigerian data on the fly for use in your projects.
 
 # Getting Started
 
