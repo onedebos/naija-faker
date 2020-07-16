@@ -24,7 +24,7 @@ This package helps you generate fake Nigerian data on the fly for use in your pr
 
 ### Generate an array of people with first name, last name, age, bank and state
 
-- To generate an array of people, simply pass an `amt` value to `getPerson()` i.e `getPersonList({amt: 2})`
+- To generate an array of people, simply pass an `amt` value to `getPersonList()` i.e `getPersonList({amt: 2})`
 - NB: Default `amt` is 5
 
 ```
