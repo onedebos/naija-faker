@@ -1,6 +1,8 @@
+![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker)
+
 # naija-faker
 
-This package helps you generate Nigerian data on the fly for use in your projects.
+This package helps you generate fake Nigerian data on the fly for use in your projects.
 
 # Getting Started
 

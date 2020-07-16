@@ -1,7 +1,7 @@
 {
   "name": "naija-faker",
-  "version": "1.2.0",
-  "description": "This package allows you to generate Nigerian names for use in your javascript projects.",
+  "version": "1.2.1",
+  "description": "This package allows you to generate Nigerian data for use in your javascript projects.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
