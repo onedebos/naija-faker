@@ -17,7 +17,7 @@ const getFirstName = (letterToStartWith) => {
     return firstNames[position];
   } else {
     // random fName that starts with letterToStartWith
-    if (letterToStartWith.length <= 1) {
+    if (letterToStartWith) {
       const arrayOfNamesThatStartsWithLetter = [];
       firstNames.map((firstName) => {
         if (firstName.startsWith(letterToStartWith)) {
@@ -43,7 +43,7 @@ const getLastName = (letterToStartWith) => {
     return lastNames[position];
   } else {
     // random fName that starts with letterToStartWith
-    if (letterToStartWith.length <= 1) {
+    if (letterToStartWith) {
       const arrayOfNamesThatStartsWithLetter = [];
       lastNames.map((lastName) => {
         if (lastName.startsWith(letterToStartWith)) {
@@ -159,4 +159,6 @@ module.exports = {
   getPersonList,
   getNameList,
   getBank,
+  getState,
+  getEmail,
 };

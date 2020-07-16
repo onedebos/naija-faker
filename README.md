@@ -1,4 +1,4 @@
-![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker)
+![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker) ![test](/badge-functions.svg)
 
 # naija-faker
 
@@ -43,12 +43,10 @@ This package helps you generate fake Nigerian data on the fly for use in your pr
 - `getFirstName() //=> 'abraham'`
 - `getLastName() //=> 'fatai`
 
-### Generate a random First name or Last name that starts with a specific letter
-
-- **NB: Currently only accepts one letter**
+### Generate a random First name or Last name that starts with a letter/letters
 
 - `getFirstName('r') //=> 'rahman'`
-- `getLastName('b') //=> 'bolanle'`
+- `getLastName('bo') //=> 'bolanle'`
 
 ### Generate a person Object with random values for First name, Last name and Age
 
@@ -90,6 +88,14 @@ getNameList({amt: 5})
 ### Generate a bank name
 
 - Simply call `getBank() //=> 'Access Bank'`
+
+### Test
+
+- To run the test, simply run
+
+```
+npm run test
+```
 
 ## Authors
 
