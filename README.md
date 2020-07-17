@@ -1,4 +1,4 @@
-![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker)
+![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker) ![test](/badge-functions.svg)
 
 # naija-faker
 
@@ -12,16 +12,15 @@ This package helps you generate fake Nigerian data on the fly for use in your pr
 - import it in your app using:
 
 ```
-// if using ES6
- import naijaFaker from 'naija-faker
+    // if using ES6
+import naijaFaker from 'naija-faker'
 
     or
 
  import {getFirstName, getLastName, getPerson, getPersonList, getNameList, getBank, getState} from 'naija-faker'
 
     // without ES6
-
- const naijaFaker = require('naija-faker)
+ const naijaFaker = require('naija-faker')
 ```
 
 - use it!
@@ -35,7 +34,7 @@ This package helps you generate fake Nigerian data on the fly for use in your pr
 ### Generate an array of people with first name, last name, age, bank, state and phone number
 
 - To generate an array of people, simply pass an `amt` value to `getPersonList()` i.e `getPersonList({amt: 2})`
-- NB: Default `amt` is 5
+- **NB: Default `amt` is 5**
 
 ```
 
@@ -134,7 +133,3 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.
-
-```
-
-```
