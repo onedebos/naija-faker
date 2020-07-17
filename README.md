@@ -1,28 +1,40 @@
+![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker) ![test](/badge-functions.svg)
+
 # naija-faker
 
-This package helps you generate Nigerian data on the fly for use in your projects.
+This package helps you generate fake Nigerian data on the fly for use in your projects.
 
 # Getting Started
 
 **To get started, follow the instructions below**
 
 - install the package `npm install naija-faker`
-- import it in your app using either of:
+- import it in your app using:
 
 ```
- import naijaFaker from 'naija-faker // if using ES6
+// if using ES6
+ import naijaFaker from 'naija-faker
+
+    or
+
+ import {getFirstName, getLastName, getPerson, getPersonList, getNameList, getBank, getState} from 'naija-faker'
+
+    // without ES6
 
  const naijaFaker = require('naija-faker)
 ```
 
 - use it!
-  `naijaFaker.getFirstName()`
+
+```
+  naijaFaker.getFirstName()
+```
 
 # Available methods
 
 ### Generate an array of people with first name, last name, age, bank and state
 
-- To generate an array of people, simply pass an `amt` value to `getPerson()` i.e `getPersonList({amt: 2})`
+- To generate an array of people, simply pass an `amt` value to `getPersonList()` i.e `getPersonList({amt: 2})`
 - NB: Default `amt` is 5
 
 ```
@@ -39,14 +51,12 @@ This package helps you generate Nigerian data on the fly for use in your project
 ### Generate a random First name or Last name
 
 - `getFirstName() //=> 'abraham'`
-- `getLastName() //=> 'fatai`
+- `getLastName() //=> 'fatai'`
 
-### Generate a random First name or Last name that starts with a specific letter
-
-- **NB: Currently only accepts one letter**
+### Generate a random First name or Last name that starts with a letter/letters
 
 - `getFirstName('r') //=> 'rahman'`
-- `getLastName('b') //=> 'bolanle'`
+- `getLastName('bo') //=> 'bolanle'`
 
 ### Generate a person Object with random values for First name, Last name and Age
 
@@ -57,18 +67,16 @@ This package helps you generate Nigerian data on the fly for use in your project
   //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti', address: 'plaza 1121, odunuga street, igboho' }
 ```
 
-````
+- To change the default `min` and `max` values for age, pass in min and max values as an object like below.
 
--- To change the default `min` and `max` values for age, pass in min and max values as an object like below.
-
-- e.g: ```
+```
   getPerson({min:20, max:50})
   => {
     fName: 'abdul', lName: 'qadr', age: 40,
     email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank', address: '9329, stanton oval, kwara, kosofe'
     }
 
-````
+```
 
 ### Generate an array of only names
 
@@ -92,6 +100,14 @@ getNameList({amt: 5})
 ### Generate an address
 
 - Simply call `getAddress() //=> 'Plot 83, Nasarawa, Bauchi'`
+
+### Test
+
+- To run the test, simply run
+
+```
+npm run test
+```
 
 ## Authors
 
