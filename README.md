@@ -30,8 +30,8 @@ This package helps you generate Nigerian data on the fly for use in your project
  getPersonList({amt: 2})
   =>
   [
-    {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti' },
-    {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta' }
+    {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti', address: '102b, opebi road, opebi, abakaliki' },
+    {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta', address: '223, ambeez plaza, zone 5, onne' }
   ]`
 
 ```
@@ -54,7 +54,7 @@ This package helps you generate Nigerian data on the fly for use in your project
 
 ```
  getPerson()
-  //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti' }
+  //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti', address: 'plaza 1121, odunuga street, igboho' }
 ```
 
 ````
@@ -65,7 +65,7 @@ This package helps you generate Nigerian data on the fly for use in your project
   getPerson({min:20, max:50})
   => {
     fName: 'abdul', lName: 'qadr', age: 40,
-    email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank'
+    email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank', address: '9329, stanton oval, kwara, kosofe'
     }
 
 ````
@@ -88,6 +88,10 @@ getNameList({amt: 5})
 ### Generate a bank name
 
 - Simply call `getBank() //=> 'Access Bank'`
+
+### Generate an address
+
+- Simply call `getAddress() //=> 'Plot 83, Nasarawa, Bauchi'`
 
 ## Authors
 

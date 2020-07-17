@@ -5,6 +5,7 @@ const {
   states,
   emailProviders,
   banks,
+  address,
 } = require(path.join(__dirname, "names.js"));
 
 const getFirstName = (letterToStartWith) => {
@@ -80,6 +81,39 @@ const getBank = () => {
   return banks[position].toLowerCase();
 };
 
+// returns address
+const getAddress = () => {
+  const houseNumber = getHouseNumber();
+  const streetAddress = getStreetAddress();
+  const city = getCity();
+  // returns address with house number, street and city
+  return `${houseNumber}, ${streetAddress}, ${city}`
+};
+
+// returns House number
+const getHouseNumber = () => {
+  const min = 0;
+  const max = address.houseNumber.length;
+  const position = Math.floor(Math.random() * (max - min) + min);
+  return address.houseNumber[position].toLowerCase();
+};
+
+// return street address
+const getStreetAddress = () => {
+  const min = 0;
+  const max = address.streetAddress.length;
+  const position = Math.floor(Math.random() * (max - min) + min);
+  return address.streetAddress[position].toLowerCase();
+};
+
+// returns city
+const getCity = () => {
+  const min = 0;
+  const max = address.city.length;
+  const position = Math.floor(Math.random() * (max - min) + min);
+  return address.city[position].toLowerCase();
+};
+
 const getPerson = (options) => {
   let fName, lName, age;
   if (!options) {
@@ -95,6 +129,7 @@ const getPerson = (options) => {
       email: getEmail(fName, lName),
       state: getState(),
       bank: getBank(),
+      address: getAddress(),
     };
   } else {
     let { min, max } = options;
@@ -108,6 +143,7 @@ const getPerson = (options) => {
       email: getEmail(fName, lName),
       state: getState(),
       bank: getBank(),
+      address: getAddress(),
     };
   }
 };
@@ -152,6 +188,8 @@ const getNameList = (options) => {
   }
 };
 
+console.log(getPersonList())
+
 module.exports = {
   getFirstName,
   getLastName,
@@ -159,4 +197,5 @@ module.exports = {
   getPersonList,
   getNameList,
   getBank,
+  getAddress,
 };
