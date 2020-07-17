@@ -15,6 +15,11 @@ describe("getFirstName", () => {
     const name = naijaFaker.getFirstName("ra");
     expect(name).toMatch(/^ra/);
   });
+
+  it("returns a first name that starts with a given letter when that letter is passed as an argument", () => {
+    const name = naijaFaker.getFirstName("r");
+    expect(name).toMatch(/^r/);
+  });
 });
 
 describe("getLastName()", () => {

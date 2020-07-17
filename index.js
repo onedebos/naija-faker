@@ -1,11 +1,10 @@
-const path = require("path");
 const {
   firstNames,
-  lastNames,
-  states,
-  emailProviders,
   banks,
-} = require(path.join(__dirname, "names.js"));
+  states,
+  lastNames,
+  emailProviders,
+} = require("./names");
 
 const getFirstName = (letterToStartWith) => {
   let max = firstNames.length - 1;
@@ -61,25 +60,26 @@ const getLastName = (letterToStartWith) => {
 
 const getEmail = (fName, lName) => {
   const min = 0;
-  max = emailProviders.length;
+  const max = emailProviders.length;
   const position = Math.floor(Math.random() * (max - min) + min);
   return `${fName}.${lName}@${emailProviders[position]}`;
 };
 
 const getState = () => {
   const min = 0;
-  max = states.length;
+  const max = states.length;
   const position = Math.floor(Math.random() * (max - min) + min);
   return states[position].toLowerCase();
 };
 
 const getBank = () => {
   const min = 0;
-  max = banks.length;
+  const max = banks.length;
   const position = Math.floor(Math.random() * (max - min) + min);
   return banks[position].toLowerCase();
 };
 
+// TODO refactor
 const getPerson = (options) => {
   let fName, lName, age;
   if (!options) {
