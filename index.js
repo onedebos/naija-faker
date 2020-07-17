@@ -1,6 +1,5 @@
 const {
   firstNames,
-  banks,
   states,
   lastNames,
   emailProviders,
