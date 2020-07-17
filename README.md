@@ -32,7 +32,7 @@ This package helps you generate fake Nigerian data on the fly for use in your pr
 
 # Available methods
 
-### Generate an array of people with first name, last name, age, bank and state
+### Generate an array of people with first name, last name, age, bank, state and phone number
 
 - To generate an array of people, simply pass an `amt` value to `getPersonList()` i.e `getPersonList({amt: 2})`
 - NB: Default `amt` is 5
@@ -42,8 +42,10 @@ This package helps you generate fake Nigerian data on the fly for use in your pr
  getPersonList({amt: 2})
   =>
   [
-    {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti' },
-    {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta' }
+    {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti',
+     phoneNumber:'+234-805-940-4016' },
+    {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta', 
+    phoneNumber:'+234-705-261-5977' }
   ]`
 
 ```
@@ -64,7 +66,8 @@ This package helps you generate fake Nigerian data on the fly for use in your pr
 
 ```
  getPerson()
-  //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti' }
+  //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti', 
+  phoneNumber:'+234-805-940-4016' }
 ```
 
 - To change the default `min` and `max` values for age, pass in min and max values as an object like below.
@@ -73,7 +76,7 @@ This package helps you generate fake Nigerian data on the fly for use in your pr
   getPerson({min:20, max:50})
   => {
     fName: 'abdul', lName: 'qadr', age: 40,
-    email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank'
+    email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank', phoneNumber:'+234-805-940-4016'
     }
 
 ```
@@ -96,6 +99,10 @@ getNameList({amt: 5})
 ### Generate a bank name
 
 - Simply call `getBank() //=> 'Access Bank'`
+
+### Generate a phone number
+
+- Simply call `getPhoneNumber() //=> '+234-805-940-4016'`
 
 ### Test
 
