@@ -5,7 +5,6 @@ const {
   emailProviders,
   banks,
   address,
-  phoneNumbers,
 } = require("./names");
 
 const getFirstName = (letterToStartWith) => {
@@ -115,13 +114,6 @@ const getCity = () => {
 };
 
 // TODO refactor
-const getPhoneNumber = () => {
-  const min = 0;
-  max = phoneNumbers.length;
-  const position = Math.floor(Math.random() * (max - min) + min);
-  return phoneNumbers[position];
-};
-
 const getPerson = (options) => {
   let fName, lName, age;
   if (!options) {
@@ -138,7 +130,6 @@ const getPerson = (options) => {
       state: getState(),
       bank: getBank(),
       address: getAddress(),
-      phoneNumber: getPhoneNumber(),
     };
   } else {
     let { min, max } = options;
@@ -153,7 +144,6 @@ const getPerson = (options) => {
       state: getState(),
       bank: getBank(),
       address: getAddress(),
-      phoneNumber: getPhoneNumber(),
     };
   }
 };
@@ -208,5 +198,4 @@ module.exports = {
   getAddress,
   getState,
   getEmail,
-  getPhoneNumber,
 };
