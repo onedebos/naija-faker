@@ -4,15 +4,12 @@
   "description": "This package allows you to generate Nigerian data for use in your javascript projects.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "test:badges": "npm run test && jest-coverage-badges"
   },
   "jest": {
-    "coverageReporters": [
-      "json-summary",
-      "text",
-      "lcov"
-    ]
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "repository": {
     "type": "git",
@@ -39,6 +36,7 @@
   },
   "homepage": "https://github.com/onedebos/naija-faker#readme",
   "devDependencies": {
+    "codecov": "^3.7.1",
     "jest": "^26.1.0",
     "jest-coverage-badges": "^1.1.2"
   }
