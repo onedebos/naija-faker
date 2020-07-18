@@ -43,7 +43,7 @@ import naijaFaker from 'naija-faker'
   [
     {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti',
      phoneNumber:'+234-805-940-4016' },
-    {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta', 
+    {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta',
     phoneNumber:'+234-705-261-5977' }
   ]`
 
@@ -65,7 +65,7 @@ import naijaFaker from 'naija-faker'
 
 ```
  getPerson()
-  //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti', 
+  //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti',
   phoneNumber:'+234-805-940-4016' }
 ```
 
