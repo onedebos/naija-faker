@@ -39,5 +39,8 @@
     "codecov": "^3.7.1",
     "jest": "^26.1.0",
     "jest-coverage-badges": "^1.1.2"
+  },
+  "dependencies": {
+    "g": "^2.0.1"
   }
 }
