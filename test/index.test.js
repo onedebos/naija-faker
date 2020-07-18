@@ -68,6 +68,7 @@ describe("getPerson()", () => {
     expect(person).toHaveProperty("age", person.age);
     expect(person).toHaveProperty("email", person.email);
     expect(person).toHaveProperty("bank", person.bank);
+    expect(person).toHaveProperty("phoneNumber", person.phoneNumber);
   });
 
   it("returns a person between the ages of min and max passed in", () => {
@@ -99,5 +100,13 @@ describe("getNameList", () => {
   it("returns an array of the length specified when an amt parameter is given", () => {
     const nameList = naijaFaker.getNameList({ amt: 20 });
     expect(nameList.length).toBe(20);
+  });
+});
+
+describe("getPhoneNumber", () => {
+  it("returns a Nigerian phoneNumber", () => {
+    const phoneNumber = naijaFaker.getPhoneNumber();
+    expect(typeof phoneNumber).toBe("string");
+    expect(phoneNumber.length).toBe(17);
   });
 });
