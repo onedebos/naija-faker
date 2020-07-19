@@ -18,9 +18,6 @@
     "type": "git",
     "url": "git+https://github.com/onedebos/naija-faker.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "keywords": [
     "nigerian",
     "names",
