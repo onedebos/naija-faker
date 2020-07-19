@@ -10,19 +10,19 @@ const {
 
 const WRONG_KEY_MESSAGE = "Did you forget to specify the key:";
 
-const getFirstName = (letterToStartWith) => {
-  let max = firstNames.length - 1;
+const getName = (letterToStartWith, nameArray) => {
+  // nameArray can be either firstNames array or lastNames array
+  let max = nameArray.length - 1;
   let min = 0;
   let position;
-  // random fName
   if (!letterToStartWith) {
     position = Math.floor(Math.random() * (max - min) + min);
-    return firstNames[position];
+    return nameArray[position];
   } else {
     const arrayOfNamesThatStartsWithLetter = [];
-    firstNames.map((firstName) => {
-      if (firstName.startsWith(letterToStartWith)) {
-        arrayOfNamesThatStartsWithLetter.push(firstName);
+    nameArray.map((name) => {
+      if (name.startsWith(letterToStartWith)) {
+        arrayOfNamesThatStartsWithLetter.push(name);
       }
     });
 
@@ -31,28 +31,14 @@ const getFirstName = (letterToStartWith) => {
     position = Math.floor(Math.random() * (max - min) + min);
     return arrayOfNamesThatStartsWithLetter[position];
   }
+}
+
+const getFirstName = (letterToStartWith) => {
+  return getName(letterToStartWith, firstNames);
 };
 
 const getLastName = (letterToStartWith) => {
-  let max = lastNames.length - 1;
-  let min = 0;
-  let position;
-  if (!letterToStartWith) {
-    position = Math.floor(Math.random() * (max - min) + min);
-    return lastNames[position];
-  } else {
-    const arrayOfNamesThatStartsWithLetter = [];
-    lastNames.map((lastName) => {
-      if (lastName.startsWith(letterToStartWith)) {
-        arrayOfNamesThatStartsWithLetter.push(lastName);
-      }
-    });
-
-    max = arrayOfNamesThatStartsWithLetter.length;
-    min = 0;
-    position = Math.floor(Math.random() * (max - min) + min);
-    return arrayOfNamesThatStartsWithLetter[position];
-  }
+  return getName(letterToStartWith, lastNames);
 };
 
 const getEmail = (fName, lName) => {
@@ -192,6 +178,7 @@ const getNameList = (options) => {
 };
 
 module.exports = {
+  getName,
   getFirstName,
   getLastName,
   getPerson,
