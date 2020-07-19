@@ -156,16 +156,13 @@ const getPerson = (options) => {
 };
 
 const getPersonList = (options) => {
-  let listCount;
-  if (!options) {
-    listCount = 5;
-  } else {
+  let listCount = 5;
+  if (options) {
     const { amt } = options;
+    if (!amt) return WRONG_KEY_MESSAGE + "'amt'";
     listCount = amt;
   }
-  if (!listCount) return WRONG_KEY_MESSAGE + "'amt'";
   const personArr = [];
-
   new Array(listCount).fill(0).map(() => {
     personArr.push(getPerson());
   });
@@ -174,16 +171,13 @@ const getPersonList = (options) => {
 };
 
 const getNameList = (options) => {
-  let listCount;
-  if (!options) {
-    listCount = 5;
-  } else {
+  let listCount = 5;
+  if (options) {
     const { amt } = options;
+    if (!amt) return WRONG_KEY_MESSAGE + "'amt'";
     listCount = amt;
   }
-  if (!listCount) return WRONG_KEY_MESSAGE + "'amt'";
   const firstNamesArr = [];
-
   new Array(listCount).fill(0).map(() => {
     firstNamesArr.push(getFirstName());
   });

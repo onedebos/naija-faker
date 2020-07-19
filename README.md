@@ -74,23 +74,25 @@ getPersonList({ amt: 2 });
 
 ```js
 getPerson();
-/*{
-      fName: 'abdul', lName: 'qadr', age: 20, 
-      email: 'abdul.qadr@hey.com', state:'ekiti', 
-      phoneNumber:'+234-805-940-4016', address: 'plaza 1121, odunuga street, igboho' 
+// outputs:
+    {
+      fName: 'abdul', lName: 'qadr', age: 20,
+      email: 'abdul.qadr@hey.com', state:'ekiti',
+      phoneNumber:'+234-805-940-4016', address: 'plaza 1121, odunuga street, igboho'
     }
-  */
+
 ```
 
 - To change the default `min` and `max` values for age, pass in min and max values as an object like below.
 
 ```js
 getPerson({ min: 20, max: 50 });
-/* {
+// outputs:
+  {
      fName: 'abdul', lName: 'qadr', age: 40,
      email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank', phoneNumber:'+234-805-940-4016', address: '9329, stanton oval, kwara, kosofe'
-    }
-  */
+  }
+
 ```
 
 ### Generate an array of only names
