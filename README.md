@@ -137,6 +137,12 @@ npm test
 
 Contributions, issues and feature requests are welcome!
 
+**Nikhil Chaurasia**
+
+- Github: [Github](https://github.com/nikhil-chaurasia14)
+- Linkedin: [linkedin](https://www.linkedin.com/in/nikhil-chaurasia-613755192)
+- Email: [Gmail](nikhil.chaurasia140298@gmail.com)
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
