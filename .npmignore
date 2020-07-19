@@ -1,5 +1,6 @@
-badge-functions.svg
 node_modules
 test
 coverage
 package-lock.json
+.travis.yml
+badges
