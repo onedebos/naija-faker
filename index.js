@@ -82,7 +82,7 @@ const getAddress = () => {
   const streetAddress = getStreetAddress();
   const city = getCity();
   // returns address with house number, street and city
-  return `${houseNumber}, ${streetAddress}, ${city}`
+  return `${houseNumber}, ${streetAddress}, ${city}`;
 };
 
 // returns House number
@@ -109,10 +109,9 @@ const getCity = () => {
   return address.city[position].toLowerCase();
 };
 
-// TODO refactor
 const getPhoneNumber = () => {
   const min = 0;
-  max = phoneNumbers.length;
+  const max = phoneNumbers.length;
   const position = Math.floor(Math.random() * (max - min) + min);
   return phoneNumbers[position];
 };
