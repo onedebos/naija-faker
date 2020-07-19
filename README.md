@@ -1,4 +1,4 @@
-![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker) ![ci](https://travis-ci.com/onedebos/naija-faker.svg?branch=master) ![test](/badge-functions.svg) ![test](/badge-statements.svg)
+![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker) ![ci](https://travis-ci.com/onedebos/naija-faker.svg?branch=master) ![test](/badges/badge-functions.svg) ![test](/badges/badge-statements.svg) ![test](/badges/badge-branches.svg) ![test](/badges/badge-lines.svg)
 
 # naija-faker
 
@@ -17,10 +17,10 @@ import naijaFaker from 'naija-faker'
 
     or
 
- import {getFirstName, getLastName, getPerson, getPersonList, getNameList, getBank, getState} from 'naija-faker'
+import {getFirstName, getLastName, getPerson, getPersonList, getNameList, getBank, getState} from 'naija-faker'
 
     // without ES6
- const naijaFaker = require('naija-faker')
+const naijaFaker = require('naija-faker')
 ```
 
 - use it!
@@ -65,8 +65,10 @@ import naijaFaker from 'naija-faker'
 
 ```
  getPerson()
-  //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti',
-  phoneNumber:'+234-805-940-4016' }
+  //=> {
+          fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti',
+          phoneNumber:'+234-805-940-4016'
+        }
 ```
 
 - To change the default `min` and `max` values for age, pass in min and max values as an object like below.
@@ -105,10 +107,11 @@ getNameList({amt: 5})
 
 ### Test
 
-- To run the test, simply run
+- To run the tests
 
 ```
-npm run test
+npm install
+npm test
 ```
 
 ## Authors

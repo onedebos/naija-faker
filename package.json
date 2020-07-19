@@ -4,12 +4,15 @@
   "description": "This package allows you to generate Nigerian data for use in your javascript projects.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "test:badges": "npm run test && jest-coverage-badges"
   },
   "jest": {
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
   },
   "repository": {
     "type": "git",
