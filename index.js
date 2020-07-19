@@ -6,6 +6,7 @@ const {
   banks,
   address,
   phoneNumbers,
+  networkProvider,
 } = require("./names");
 
 const WRONG_KEY_MESSAGE = "Did you forget to specify the key:";
@@ -116,6 +117,12 @@ const getPhoneNumber = () => {
   return phoneNumbers[position];
 };
 
+// returns netowrk provider basd on the 2nd part of phonenumber
+const getNetworkProvider = (phoneNumber) => {
+  const getNetworkPrefix = phoneNumber.split("-")[1];
+  return networkProvider[getNetworkPrefix];
+}
+
 const getPerson = (options) => {
   let fName, lName, age;
   if (!options) {
@@ -124,6 +131,7 @@ const getPerson = (options) => {
     fName = getFirstName();
     lName = getLastName();
     age = Math.floor(Math.random() * (max - min) + min);
+    phoneNumber = getPhoneNumber();
     return {
       fName,
       lName,
@@ -132,7 +140,8 @@ const getPerson = (options) => {
       state: getState(),
       bank: getBank(),
       address: getAddress(),
-      phoneNumber: getPhoneNumber(),
+      phoneNumber,
+      networkProvider: getNetworkProvider(phoneNumber),
     };
   } else {
     let { min, max } = options;
@@ -142,6 +151,7 @@ const getPerson = (options) => {
     fName = getFirstName();
     lName = getLastName();
     age = Math.floor(Math.random() * (max - min) + min);
+    phoneNumber = getPhoneNumber();
     return {
       fName,
       lName,
@@ -150,7 +160,8 @@ const getPerson = (options) => {
       state: getState(),
       bank: getBank(),
       address: getAddress(),
-      phoneNumber: getPhoneNumber(),
+      phoneNumber,
+      networkProvider: getNetworkProvider(phoneNumber),
     };
   }
 };
@@ -202,4 +213,5 @@ module.exports = {
   getState,
   getEmail,
   getPhoneNumber,
+  getNetworkProvider,
 };

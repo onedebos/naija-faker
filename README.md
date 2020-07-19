@@ -43,9 +43,9 @@ const naijaFaker = require('naija-faker')
   =>
   [
     {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti',
-     phoneNumber:'+234-805-940-4016', address: '102b, opebi road, opebi, abakaliki' },
+     phoneNumber:'+234-805-940-4016', address: '102b, opebi road, opebi, abakaliki', networkProvider: 'Globacom' },
     {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta', 
-    phoneNumber:'+234-705-261-5977', address: '223, ambeez plaza, zone 5, onne' }
+    phoneNumber:'+234-705-261-5977', address: '223, ambeez plaza, zone 5, onne', networkProvider: 'Globacom'  }
   ]
 
 ```
@@ -67,7 +67,7 @@ const naijaFaker = require('naija-faker')
 ```
  getPerson()
   //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti', 
-  phoneNumber:'+234-805-940-4016', address: 'plaza 1121, odunuga street, igboho' }
+  phoneNumber:'+234-805-940-4016', address: 'plaza 1121, odunuga street, igboho', networkProvider: 'Globacom' }
 
 ```
 
@@ -77,7 +77,7 @@ const naijaFaker = require('naija-faker')
   getPerson({min:20, max:50})
   => {
     fName: 'abdul', lName: 'qadr', age: 40,
-    email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank', phoneNumber:'+234-805-940-4016', address: '9329, stanton oval, kwara, kosofe'
+    email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank', phoneNumber:'+234-805-940-4016', address: '9329, stanton oval, kwara, kosofe', networkProvider: 'Globacom'
     }
 
 ```
