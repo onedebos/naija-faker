@@ -1,4 +1,5 @@
-![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker) ![ci](https://travis-ci.com/onedebos/naija-faker.svg?branch=master) ![test](/badges/badge-functions.svg) ![test](/badges/badge-statements.svg) ![test](/badges/badge-branches.svg) ![test](/badges/badge-lines.svg)
+![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker) ![ci](https://travis-ci.com/onedebos/naija-faker.svg?branch=master) 
+![test](/badges/badge-functions.svg) ![test](/badges/badge-statements.svg) ![test](/badges/badge-branches.svg) ![test](/badges/badge-lines.svg)
 
 # naija-faker
 
