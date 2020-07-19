@@ -131,9 +131,9 @@ npm test
 
 👤 **Mayank Bucha**
 
-- Github: [@githubhandle] (https://github.com/mayankbucha)
-- Linkedin: [linkedin] (https://www.linkedin.com/in/mayank-bucha-a50958174/)
-- Email: [gmail] (mayankbucha01@gmail.com)
+- Github: [@githubhandle](https://github.com/mayankbucha)
+- Linkedin: [linkedin](https://www.linkedin.com/in/mayank-bucha-a50958174/)
+- Email: [gmail](mayankbucha01@gmail.com)
 
 👤 **Nikhil Chaurasia**
 
