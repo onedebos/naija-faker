@@ -8,6 +8,8 @@ const {
   phoneNumbers,
 } = require("./names");
 
+const WRONG_KEY_MESSAGE = "Did you forget to specify the key:";
+
 const getFirstName = (letterToStartWith) => {
   let max = firstNames.length - 1;
   let min = 0;
@@ -17,20 +19,17 @@ const getFirstName = (letterToStartWith) => {
     position = Math.floor(Math.random() * (max - min) + min);
     return firstNames[position];
   } else {
-    // random fName that starts with letterToStartWith
-    if (letterToStartWith) {
-      const arrayOfNamesThatStartsWithLetter = [];
-      firstNames.map((firstName) => {
-        if (firstName.startsWith(letterToStartWith)) {
-          arrayOfNamesThatStartsWithLetter.push(firstName);
-        }
-      });
+    const arrayOfNamesThatStartsWithLetter = [];
+    firstNames.map((firstName) => {
+      if (firstName.startsWith(letterToStartWith)) {
+        arrayOfNamesThatStartsWithLetter.push(firstName);
+      }
+    });
 
-      max = arrayOfNamesThatStartsWithLetter.length;
-      min = 0;
-      position = Math.floor(Math.random() * (max - min) + min);
-      return arrayOfNamesThatStartsWithLetter[position];
-    }
+    max = arrayOfNamesThatStartsWithLetter.length;
+    min = 0;
+    position = Math.floor(Math.random() * (max - min) + min);
+    return arrayOfNamesThatStartsWithLetter[position];
   }
 };
 
@@ -38,25 +37,21 @@ const getLastName = (letterToStartWith) => {
   let max = lastNames.length - 1;
   let min = 0;
   let position;
-  // random fName
   if (!letterToStartWith) {
     position = Math.floor(Math.random() * (max - min) + min);
     return lastNames[position];
   } else {
-    // random fName that starts with letterToStartWith
-    if (letterToStartWith) {
-      const arrayOfNamesThatStartsWithLetter = [];
-      lastNames.map((lastName) => {
-        if (lastName.startsWith(letterToStartWith)) {
-          arrayOfNamesThatStartsWithLetter.push(lastName);
-        }
-      });
+    const arrayOfNamesThatStartsWithLetter = [];
+    lastNames.map((lastName) => {
+      if (lastName.startsWith(letterToStartWith)) {
+        arrayOfNamesThatStartsWithLetter.push(lastName);
+      }
+    });
 
-      max = arrayOfNamesThatStartsWithLetter.length;
-      min = 0;
-      position = Math.floor(Math.random() * (max - min) + min);
-      return arrayOfNamesThatStartsWithLetter[position];
-    }
+    max = arrayOfNamesThatStartsWithLetter.length;
+    min = 0;
+    position = Math.floor(Math.random() * (max - min) + min);
+    return arrayOfNamesThatStartsWithLetter[position];
   }
 };
 
@@ -142,6 +137,9 @@ const getPerson = (options) => {
     };
   } else {
     let { min, max } = options;
+    if (!min && !max) {
+      return WRONG_KEY_MESSAGE + "'min' and 'max'";
+    }
     fName = getFirstName();
     lName = getLastName();
     age = Math.floor(Math.random() * (max - min) + min);
@@ -166,16 +164,14 @@ const getPersonList = (options) => {
     const { amt } = options;
     listCount = amt;
   }
-
-  const persons = new Array(listCount).fill(0);
+  if (!listCount) return WRONG_KEY_MESSAGE + "'amt'";
   const personArr = [];
-  if (listCount) {
-    persons.map(() => {
-      personArr.push(getPerson());
-    });
 
-    return personArr;
-  }
+  new Array(listCount).fill(0).map(() => {
+    personArr.push(getPerson());
+  });
+
+  return personArr;
 };
 
 const getNameList = (options) => {
@@ -186,16 +182,14 @@ const getNameList = (options) => {
     const { amt } = options;
     listCount = amt;
   }
-
-  const nameCnt = new Array(listCount).fill(0);
+  if (!listCount) return WRONG_KEY_MESSAGE + "'amt'";
   const firstNamesArr = [];
-  if (listCount) {
-    nameCnt.map(() => {
-      firstNamesArr.push(getPerson());
-    });
 
-    return firstNamesArr;
-  }
+  new Array(listCount).fill(0).map(() => {
+    firstNamesArr.push(getFirstName());
+  });
+
+  return firstNamesArr;
 };
 
 module.exports = {
