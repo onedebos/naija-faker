@@ -1,4 +1,5 @@
-![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker) ![ci](https://travis-ci.com/onedebos/naija-faker.svg?branch=master) ![test](/badges/badge-functions.svg) ![test](/badges/badge-statements.svg) ![test](/badges/badge-branches.svg) ![test](/badges/badge-lines.svg)
+![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker) ![ci](https://travis-ci.com/onedebos/naija-faker.svg?branch=master) 
+![test](/badges/badge-functions.svg) ![test](/badges/badge-statements.svg) ![test](/badges/badge-branches.svg) ![test](/badges/badge-lines.svg)
 
 # naija-faker
 
@@ -139,9 +140,19 @@ npm test
 - Linkedin: [linkedin](https://www.linkedin.com/in/adebola-niran/)
 - Web: [Adebola](https://adebola.dev)
 
-## 🤝 Contributing
+## 🤝 Contributors
 
-Contributions, issues and feature requests are welcome!
+👤 **Mayank Bucha**
+
+- Github: [@githubhandle](https://github.com/mayankbucha)
+- Linkedin: [linkedin](https://www.linkedin.com/in/mayank-bucha-a50958174/)
+- Email: [gmail](mayankbucha01@gmail.com)
+
+👤 **Nikhil Chaurasia**
+
+- Github: [Github](https://github.com/nikhil-chaurasia14)
+- Linkedin: [linkedin](https://www.linkedin.com/in/nikhil-chaurasia-613755192)
+- Email: [Gmail](nikhil.chaurasia140298@gmail.com)
 
 ## Show your support
 
