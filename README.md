@@ -127,6 +127,12 @@ npm test
 - Linkedin: [linkedin](https://www.linkedin.com/in/adebola-niran/)
 - Web: [Adebola](https://adebola.dev)
 
+👤 **Mayank Bucha**
+
+- Github: [@githubhandle] (https://github.com/mayankbucha)
+- Linkedin: [linkedin] (https://www.linkedin.com/in/mayank-bucha-a50958174/)
+- Email: [gmail] (mayankbucha01@gmail.com)
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
