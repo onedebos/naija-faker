@@ -135,7 +135,7 @@ npm test
 - Linkedin: [linkedin] (https://www.linkedin.com/in/mayank-bucha-a50958174/)
 - Email: [gmail] (mayankbucha01@gmail.com)
 
-**Nikhil Chaurasia**
+👤 **Nikhil Chaurasia**
 
 - Github: [Github](https://github.com/nikhil-chaurasia14)
 - Linkedin: [linkedin](https://www.linkedin.com/in/nikhil-chaurasia-613755192)
