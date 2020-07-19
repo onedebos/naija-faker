@@ -42,10 +42,10 @@ const naijaFaker = require('naija-faker')
   =>
   [
     {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti',
-     phoneNumber:'+234-805-940-4016' },
-    {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta',
-    phoneNumber:'+234-705-261-5977' }
-  ]`
+     phoneNumber:'+234-805-940-4016', address: '102b, opebi road, opebi, abakaliki' },
+    {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta', 
+    phoneNumber:'+234-705-261-5977', address: '223, ambeez plaza, zone 5, onne' }
+  ]
 
 ```
 
@@ -65,10 +65,9 @@ const naijaFaker = require('naija-faker')
 
 ```
  getPerson()
-  //=> {
-          fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti',
-          phoneNumber:'+234-805-940-4016'
-        }
+  //=> {fName: 'abdul', lName: 'qadr', age: 20, email: 'abdul.qadr@hey.com', state:'ekiti', 
+  phoneNumber:'+234-805-940-4016', address: 'plaza 1121, odunuga street, igboho' }
+
 ```
 
 - To change the default `min` and `max` values for age, pass in min and max values as an object like below.
@@ -77,7 +76,7 @@ const naijaFaker = require('naija-faker')
   getPerson({min:20, max:50})
   => {
     fName: 'abdul', lName: 'qadr', age: 40,
-    email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank', phoneNumber:'+234-805-940-4016'
+    email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank', phoneNumber:'+234-805-940-4016', address: '9329, stanton oval, kwara, kosofe'
     }
 
 ```
@@ -100,6 +99,10 @@ getNameList({amt: 5})
 ### Generate a bank name
 
 - Simply call `getBank() //=> 'Access Bank'`
+
+### Generate an address
+
+- Simply call `getAddress() //=> 'Plot 83, Nasarawa, Bauchi'`
 
 ### Generate a phone number
 

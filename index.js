@@ -1,9 +1,10 @@
 const {
   firstNames,
-  banks,
   states,
   lastNames,
   emailProviders,
+  banks,
+  address,
   phoneNumbers,
 } = require("./names");
 
@@ -75,6 +76,40 @@ const getBank = () => {
   return banks[position].toLowerCase();
 };
 
+// returns address
+const getAddress = () => {
+  const houseNumber = getHouseNumber();
+  const streetAddress = getStreetAddress();
+  const city = getCity();
+  // returns address with house number, street and city
+  return `${houseNumber}, ${streetAddress}, ${city}`
+};
+
+// returns House number
+const getHouseNumber = () => {
+  const min = 0;
+  const max = address.houseNumber.length;
+  const position = Math.floor(Math.random() * (max - min) + min);
+  return address.houseNumber[position].toLowerCase();
+};
+
+// return street address
+const getStreetAddress = () => {
+  const min = 0;
+  const max = address.streetAddress.length;
+  const position = Math.floor(Math.random() * (max - min) + min);
+  return address.streetAddress[position].toLowerCase();
+};
+
+// returns city
+const getCity = () => {
+  const min = 0;
+  const max = address.city.length;
+  const position = Math.floor(Math.random() * (max - min) + min);
+  return address.city[position].toLowerCase();
+};
+
+// TODO refactor
 const getPhoneNumber = () => {
   const min = 0;
   max = phoneNumbers.length;
@@ -97,6 +132,7 @@ const getPerson = (options) => {
       email: getEmail(fName, lName),
       state: getState(),
       bank: getBank(),
+      address: getAddress(),
       phoneNumber: getPhoneNumber(),
     };
   } else {
@@ -114,6 +150,7 @@ const getPerson = (options) => {
       email: getEmail(fName, lName),
       state: getState(),
       bank: getBank(),
+      address: getAddress(),
       phoneNumber: getPhoneNumber(),
     };
   }
@@ -162,6 +199,7 @@ module.exports = {
   getPersonList,
   getNameList,
   getBank,
+  getAddress,
   getState,
   getEmail,
   getPhoneNumber,
