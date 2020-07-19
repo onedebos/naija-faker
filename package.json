@@ -1,6 +1,6 @@
 {
   "name": "naija-faker",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "This package allows you to generate fake Nigerian data for use in your JavaScript projects.",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/onedebos/naija-faker.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "nigerian",
