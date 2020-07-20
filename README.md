@@ -104,7 +104,9 @@ getPerson({ min: 20, max: 50 });
 // outputs:
   {
      fName: 'abdul', lName: 'qadr', age: 40,
-     email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank', phoneNumber:'+234-805-940-4016', address: '9329, stanton oval, kwara, kosofe'
+     email: 'abdul.qadr@hey.com', state:'ekiti', bank:'Access bank', phoneNumber:'+234-805-940-4016',
+     networkProvider: 'Globacom',
+     address: '9329, stanton oval, kwara, kosofe'
   }
 
 ```

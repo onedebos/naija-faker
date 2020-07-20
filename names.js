@@ -4277,7 +4277,7 @@ const address = {
     "Suite B1",
     "Suite D24",
   ],
-  
+
   streetAddress: [
     "21 - 25, Broad St.",
     "4th Avenue, Federal Housing Estate",
@@ -4395,7 +4395,7 @@ const address = {
     "Worldchanger Avenue, Adamo Town",
     "Wuse 2, Wuse II",
   ],
-  
+
   city: [
     "Aba South",
     "Abaji",
@@ -4530,12 +4530,12 @@ const address = {
     "Yola",
     "Yusufari",
     "Zaria",
-  ]
+  ],
 };
 
-// Networ providers: Airtel, MTN, Globacom, 9mobile
+// Network providers: Airtel, MTN, Globacom, 9mobile
 const networkProvider = {
-  "701": "Airtel", 
+  "701": "Airtel",
   "708": "Airtel",
   "802": "Airtel",
   "808": "Airtel",
@@ -4566,6 +4566,14 @@ const networkProvider = {
   "818": "9mobile",
   "909": "9mobile",
   "908": "9mobile",
-}
+};
 
-module.exports = { firstNames, lastNames, states, emailProviders, banks, address, networkProvider };
+module.exports = {
+  firstNames,
+  lastNames,
+  states,
+  emailProviders,
+  banks,
+  address,
+  networkProvider,
+};
