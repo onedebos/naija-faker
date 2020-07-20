@@ -5,6 +5,8 @@
 
 This package helps you generate fake Nigerian data on the fly for use in your projects.
 
+[See it on NPM](https://www.npmjs.com/package/naija-faker)
+
 # Getting Started
 
 **To get started, follow the instructions below**
