@@ -88,7 +88,7 @@ describe("getPerson()", () => {
     expect(person.age).toBeLessThanOrEqual(35);
   });
 
-  it("returns undefined when the wrong an options argument different from min and max is passed in", () => {
+  it("returns a message when the key min and max are not specified", () => {
     const person = naijaFaker.getPerson({ sauce: 20, sauce2: 10 });
     expect(person).toBe("Did you forget to specify the key:'min' and 'max'");
   });
@@ -107,7 +107,7 @@ describe("getPersonList()", () => {
     expect(personList.length).toBe(10);
   });
 
-  it("returns undefined when the wrong argument name is passed in", () => {
+  it("returns an error message when the wrong argument name is passed in", () => {
     const personList = naijaFaker.getPersonList({ sauce: 20 });
     expect(personList).toBe("Did you forget to specify the key:'amt'");
   });

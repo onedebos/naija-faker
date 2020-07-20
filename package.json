@@ -1,6 +1,6 @@
 {
   "name": "naija-faker",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "This package allows you to generate fake Nigerian data for use in your JavaScript projects.",
   "main": "index.js",
   "scripts": {
@@ -39,6 +39,7 @@
   },
   "homepage": "https://github.com/onedebos/naija-faker#readme",
   "devDependencies": {
+    "codecov": "^3.7.1",
     "jest": "^26.1.0",
     "jest-coverage-badges": "^1.1.2"
   }
