@@ -1,4 +1,4 @@
-![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker) ![ci](https://travis-ci.com/onedebos/naija-faker.svg?branch=master) 
+![issues](https://img.shields.io/github/issues/onedebos/naija-faker) ![forks](https://img.shields.io/github/forks/onedebos/naija-faker) ![stars](https://img.shields.io/github/stars/onedebos/naija-faker?&color=brightgreen) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/onedebos/naija-faker) ![ci](https://travis-ci.com/onedebos/naija-faker.svg?branch=master)
 ![test](/badges/badge-functions.svg) ![test](/badges/badge-statements.svg) ![test](/badges/badge-branches.svg) ![test](/badges/badge-lines.svg)
 
 # naija-faker
@@ -49,14 +49,27 @@ naijaFaker.getFirstName();
 
 ```js
 getPersonList({ amt: 2 });
-/*
-  [
-    {fName: 'abdul', lName: 'qadr', age: 40, email: 'abdul.qadr@hey.com', state:'ekiti',
-     phoneNumber:'+234-805-940-4016', address: '102b, opebi road, opebi, abakaliki' },
-    {fName: 'frank', lName: 'edoho', age: 23, email: 'frank.edoho@gmail.com', state:'delta', 
-    phoneNumber:'+234-705-261-5977', address: '223, ambeez plaza, zone 5, onne' }
-  ]
-  */
+//outputs:
+[
+  {
+    fName: "abdul",
+    lName: "qadr",
+    age: 40,
+    email: "abdul.qadr@hey.com",
+    state: "ekiti",
+    phoneNumber: "+234-805-940-4016",
+    address: "102b, opebi road, opebi, abakaliki",
+  },
+  {
+    fName: "frank",
+    lName: "edoho",
+    age: 23,
+    email: "frank.edoho@gmail.com",
+    state: "delta",
+    phoneNumber: "+234-705-261-5977",
+    address: "223, ambeez plaza, zone 5, onne",
+  },
+];
 ```
 
 ### Generate a random First name or Last name
