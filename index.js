@@ -178,7 +178,6 @@ const getNameList = (options) => {
 };
 
 module.exports = {
-  getName,
   getFirstName,
   getLastName,
   getPerson,
