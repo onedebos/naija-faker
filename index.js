@@ -5,7 +5,7 @@ const {
   emailProviders,
   banks,
   address,
-  phoneNumbers,
+  networkProvider,
 } = require("./names");
 
 const WRONG_KEY_MESSAGE = "Did you forget to specify the key:";
@@ -95,12 +95,28 @@ const getCity = () => {
   return address.city[position].toLowerCase();
 };
 
+// Randomly generates phone number based on the network provider
 const getPhoneNumber = () => {
-  const min = 0;
-  const max = phoneNumbers.length;
-  const position = Math.floor(Math.random() * (max - min) + min);
-  return phoneNumbers[position];
+  const countryCode = "+234";
+
+  // Generating network provider prefix
+  const networkPrefixArray = Object.keys(networkProvider);
+  const randomIndex = Math.floor(networkPrefixArray.length*Math.random());
+  const networkPrefix = networkPrefixArray[randomIndex];
+  
+  // Generating the last part
+  const threeDigitPart = (Math.floor(Math.random() * 1000) + 1000).toString().substring(1);
+  const fourDigitPart = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
+
+  // Full number
+  return `${countryCode}-${networkPrefix}-${threeDigitPart}-${fourDigitPart}`
 };
+
+// returns netowrk provider basd on the 2nd part of phonenumber
+const getNetworkProvider = (phoneNumber) => {
+  const getNetworkPrefix = phoneNumber.split("-")[1];
+  return networkProvider[getNetworkPrefix];
+}
 
 const getPerson = (options) => {
   let fName, lName, age;
@@ -110,6 +126,7 @@ const getPerson = (options) => {
     fName = getFirstName();
     lName = getLastName();
     age = Math.floor(Math.random() * (max - min) + min);
+    phoneNumber = getPhoneNumber();
     return {
       fName,
       lName,
@@ -118,7 +135,8 @@ const getPerson = (options) => {
       state: getState(),
       bank: getBank(),
       address: getAddress(),
-      phoneNumber: getPhoneNumber(),
+      phoneNumber,
+      networkProvider: getNetworkProvider(phoneNumber),
     };
   } else {
     let { min, max } = options;
@@ -128,6 +146,7 @@ const getPerson = (options) => {
     fName = getFirstName();
     lName = getLastName();
     age = Math.floor(Math.random() * (max - min) + min);
+    phoneNumber = getPhoneNumber();
     return {
       fName,
       lName,
@@ -136,22 +155,20 @@ const getPerson = (options) => {
       state: getState(),
       bank: getBank(),
       address: getAddress(),
-      phoneNumber: getPhoneNumber(),
+      phoneNumber,
+      networkProvider: getNetworkProvider(phoneNumber),
     };
   }
 };
 
 const getPersonList = (options) => {
-  let listCount;
-  if (!options) {
-    listCount = 5;
-  } else {
+  let listCount = 5;
+  if (options) {
     const { amt } = options;
+    if (!amt) return WRONG_KEY_MESSAGE + "'amt'";
     listCount = amt;
   }
-  if (!listCount) return WRONG_KEY_MESSAGE + "'amt'";
   const personArr = [];
-
   new Array(listCount).fill(0).map(() => {
     personArr.push(getPerson());
   });
@@ -160,16 +177,13 @@ const getPersonList = (options) => {
 };
 
 const getNameList = (options) => {
-  let listCount;
-  if (!options) {
-    listCount = 5;
-  } else {
+  let listCount = 5;
+  if (options) {
     const { amt } = options;
+    if (!amt) return WRONG_KEY_MESSAGE + "'amt'";
     listCount = amt;
   }
-  if (!listCount) return WRONG_KEY_MESSAGE + "'amt'";
   const firstNamesArr = [];
-
   new Array(listCount).fill(0).map(() => {
     firstNamesArr.push(getFirstName());
   });
@@ -188,4 +202,5 @@ module.exports = {
   getState,
   getEmail,
   getPhoneNumber,
+  getNetworkProvider,
 };
