@@ -4,5 +4,4 @@ node_js:
 cache:
   directories:
     - "node_modules"
-  after_success:
-    - ./node_modules/.bin/codecov -e TRAVIS_NODE_VERSION -f coverage/*.json
+script: "npm test && ./node_modules/.bin/codecov -e TRAVIS_NODE_VERSION -f coverage/*.json"
