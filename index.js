@@ -5,7 +5,6 @@ const {
   emailProviders,
   banks,
   address,
-  phoneNumbers,
   networkProvider,
 } = require("./names");
 
@@ -110,11 +109,21 @@ const getCity = () => {
   return address.city[position].toLowerCase();
 };
 
+// Randomly generates phone number based on the network provider
 const getPhoneNumber = () => {
-  const min = 0;
-  const max = phoneNumbers.length;
-  const position = Math.floor(Math.random() * (max - min) + min);
-  return phoneNumbers[position];
+  const countryCode = "+234";
+
+  // Generating network provider prefix
+  const networkPrefixArray = Object.keys(networkProvider);
+  const randomIndex = Math.floor(networkPrefixArray.length*Math.random());
+  const networkPrefix = networkPrefixArray[randomIndex];
+  
+  // Generating the last part
+  const threeDigitPart = (Math.floor(Math.random() * 1000) + 1000).toString().substring(1);
+  const fourDigitPart = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
+
+  // Full number
+  return `${countryCode}-${networkPrefix}-${threeDigitPart}-${fourDigitPart}`
 };
 
 // returns netowrk provider basd on the 2nd part of phonenumber
