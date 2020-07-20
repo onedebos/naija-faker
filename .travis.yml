@@ -4,4 +4,4 @@ node_js:
 cache:
   directories:
     - "node_modules"
-script: "./node_modules/.bin/codecov"
+script: "npm test && ./node_modules/.bin/codecov"
